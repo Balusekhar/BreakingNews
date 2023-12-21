@@ -8,6 +8,9 @@
         android:id="@+id/articlesFragment"
         android:name="com.example.breakingnews.ui.fragments.ArticlesFragment"
         android:label="ArticlesFragment" />
+
+    <argument android:name="article"
+        app:argType="com.example.breakingnews.models.Article"/>
     <fragment
         android:id="@+id/headlinesFragment"
         android:name="com.example.breakingnews.ui.fragments.HeadlinesFragment"

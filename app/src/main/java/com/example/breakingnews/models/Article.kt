@@ -1,15 +1,20 @@
 package com.example.breakingnews.models
 
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
-import java.io.Serializable
+import kotlinx.parcelize.Parcelize
+import kotlinx.parcelize.RawValue
 
+
+@Parcelize
 @Entity(tableName = "articles")
 data class Article(
     @PrimaryKey(autoGenerate = true)
-    var id:Int?= null,
+    @SerializedName("id")
+    var id:Int? = null,
     @SerializedName("author")
     var author: String,
     @SerializedName("content")
@@ -19,11 +24,19 @@ data class Article(
     @SerializedName("publishedAt")
     var publishedAt: String,
     @SerializedName("source")
-    var source: Source,
+    var source: @RawValue Source,
     @SerializedName("title")
     var title: String,
     @SerializedName("url")
     var url: String,
     @SerializedName("urlToImage")
     var urlToImage: String
-):Serializable
+):Parcelable{
+    override fun hashCode(): Int {
+        var result = id.hashCode()
+        if(url.isEmpty()){
+            result = 31 * result + url.hashCode()
+        }
+        return result
+    }
+}

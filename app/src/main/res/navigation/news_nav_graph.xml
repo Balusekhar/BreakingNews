@@ -7,16 +7,18 @@
     <fragment
         android:id="@+id/articlesFragment"
         android:name="com.example.breakingnews.ui.fragments.ArticlesFragment"
-        android:label="ArticlesFragment" />
+        android:label="ArticlesFragment" >
+        <argument
+            android:name="article"
+            app:argType="com.example.breakingnews.models.Article" />
+    </fragment>
 
-    <argument android:name="article"
-        app:argType="com.example.breakingnews.models.Article"/>
     <fragment
         android:id="@+id/headlinesFragment"
         android:name="com.example.breakingnews.ui.fragments.HeadlinesFragment"
         android:label="HeadlinesFragment" >
         <action
-            android:id="@+id/action_headlinesFragment2_to_articlesFragment"
+            android:id="@+id/action_headlinesFragment_to_articlesFragment"
             app:destination="@id/articlesFragment" />
     </fragment>
     <fragment
@@ -24,7 +26,7 @@
         android:name="com.example.breakingnews.ui.fragments.SearchFragment"
         android:label="SearchFragment" >
         <action
-            android:id="@+id/action_searchFragment2_to_articlesFragment"
+            android:id="@+id/action_searchFragment_to_articlesFragment"
             app:destination="@id/articlesFragment" />
     </fragment>
     <fragment
@@ -32,7 +34,8 @@
         android:name="com.example.breakingnews.ui.fragments.FavouritesFragment"
         android:label="FavouritesFragment" >
         <action
-            android:id="@+id/action_favouritesFragment2_to_articlesFragment"
+            android:id="@+id/action_favouritesFragment_to_articlesFragment"
             app:destination="@id/articlesFragment" />
     </fragment>
+
 </navigation>

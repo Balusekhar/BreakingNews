@@ -4,4 +4,20 @@
     <color name="white">#FFFFFFFF</color>
     <color name="purple">#593c8f</color>
     <color name="yellow">#FFC000</color>
+
+
+    <!-- Primary text color, usually for titles and important text -->
+    <color name="primaryText">#333333</color>
+
+    <!-- Secondary text color, for less prominent text -->
+    <color name="secondaryText">#666666</color>
+
+    <!-- A primary color for your app theme -->
+    <color name="primaryColor">#1E88E5</color>
+
+    <!-- A secondary color for contrasting elements -->
+    <color name="secondaryColor">#D32F2F</color>
+
+    <!-- Background color for the app -->
+    <color name="backgroundColor">#FFFFFF</color>
 </resources>
